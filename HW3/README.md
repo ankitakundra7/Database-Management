@@ -8,17 +8,29 @@
    - **Part B:** Using the MINUS operator, compare the query from #3 to the query from Part A in #4.  If you get no rows returned, that means the queries produce the same results. 
 5. Write a SELECT statement that returns these column names and data from the Reservation table:
 
-
+Select Statement
 
      customer_id     The customer_id column
      location_id     The location_id column
      length_of_stay  This is calculated by subtracting check_in_date from the check_out_date. Assign an alias of length_of_stay 
 
-
 Filter the query to only show completed reservations (i.e. status = ‘C’).  After you have that running correctly, update filter to use the ROWNUM pseudo column so the result set contains only the first 10 rows from the table.Sort the result set by the column alias length_of_stay in descending order and then also by customer_id ascending
-8. Write a SELECT statement that returns the first_name, last_name, email from Customer and also a fourth column called credits_available. The credits available is calculated by subtracting credits used from credits earned.  Once you have this, filter to only show customers with at least 10 or more credits available.  Sort results by the column alias credits_available.
-9. Write a SELECT statement that returns the first, middle, and last name of a customer’s payment profile on Customer_Payment. Using the NULL operator, return only rows for those customers with a middle name. Sort by column positions 2 and then 3 in ascending order
-10. Using the DUAL table write a SELECT statement that uses SYSDATE function to create a row with these columns. This displays a number for the month, a number for the day, and a four-digit year. Use a FROM clause that specifies the Dual table. Hint: You will need to implement the TO_CHAR function to format the sysdate in the format designated above.
+6. Write a SELECT statement that returns the first_name, last_name, email from Customer and also a fourth column called credits_available. The credits available is calculated by subtracting credits used from credits earned.  Once you have this, filter to only show customers with at least 10 or more credits available.  Sort results by the column alias credits_available.
+7. Write a SELECT statement that returns the first, middle, and last name of a customer’s payment profile on Customer_Payment. Using the NULL operator, return only rows for those customers with a middle name. Sort by column positions 2 and then 3 in ascending order
+8. Using the DUAL table write a SELECT statement that uses SYSDATE function to create a row with these columns. 
+
+       today_unformatted         The SYSDATE function unformatted
+       today_formatted             The SYSDATE function in this format: MM/DD/YYYY
+
+This displays a number for the month, a number for the day, and a four-digit year. Use a FROM clause that specifies the Dual table. Hint: You will need to implement the TO_CHAR function to format the sysdate in the format designated above.
+
+After you write this add the following columns to the row:
+
+       Credits_Earned        25
+       Stays_Earned          25 / 10
+       Redeemable_stays      (25/10) returned with FLOOR() function
+       Next_Stay_to_earn     (25/10) rounded to nearest whole number 
+
 11. Write a SELECT statement that pulls Reservation records for all reservations that are completed (i.e. status of C) for location 2. Return only the following columns: Customer_id, Location_id, and a calculated column called length_of_stay which is just checkout date minus check-in date. Sort the results by length_of_stay descending and customer_id ascending. Lastly only pull in the top 20 rows. That means we want you to sort the table before filtering the 20 rows.  Hint: Do this using FETCH command and not with a subquery since subqueries come later.
 12. Pull all customers and their reservations. Filter data to only show completed reservations (i.e. status is C).  Return just the following columns: first_name, last_name, confirmation_nbr, date_created, check_in_date, check_out_date. Sort results by customer_id ascending and check_out_date descending so that we see all customers and their most recent checkouts first.
 13. Write a query that joins matching records between the following tables (Customer, Reservation, Reservation_Details, and Room) so we can understand what rooms customers are staying in. Only return rows for upcoming reservations (i.e. status of U) and for customers that have earned more than 40 credits.  The query should display the following columns:
