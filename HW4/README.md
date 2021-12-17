@@ -21,8 +21,8 @@ Sort the results by state ascending and then avg_credits_earned descending (i.e.
      - The last_name column
      - The room_number column
      - The count of reservations (i.e. reseravation_id) for each room with a column alias of stay_count
-  - Sort the result set by customer_id ascending and then by the stay_count alias in descending order.
-  - This query should highlight for each customer if they’ve had more than 1 stay in a room or not. 
+   - Sort the result set by customer_id ascending and then by the stay_count alias in descending order.
+   - This query should highlight for each customer if they’ve had more than 1 stay in a room or not. 
 5. Make a copy of the previous query and let’s make two updates to it. We decided we only want to look at completed reservations and not in-progress or future reservations so filter to only show status of C.  Then filter out any results that have a stay_count of 2 or less.  This should result in showing us who has already stayed in a particular room 3 or more times.
 
 6. We want to know the anticipated number of guests by location and check_in_date.
