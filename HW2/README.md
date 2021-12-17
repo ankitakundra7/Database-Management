@@ -22,9 +22,10 @@ o    If you want to add additional comments to single statements or lines feel f
  
 
 **Constraints**
-•    Assign primary and foreign keys per the design.
-•    Only the following can be NULL: Address_line_2 since it’s not required. Customers’ birthdates since it’s not always known. The reservation Checkout Date, Discount Code, Customer Rating, and Notes are also not required since they are allowed to be blank when the reservation is created.  Note, if you see other fields that could be nullable, please clarify these assumptions on Slack. 
-•    The following fields should be UNIQUE: Customer email, Feature Name, Location Name, Reservation, and Confirmation Number. Again, if you find other potential non-primary keys, bring this up on Slack.
+
+- Assign primary and foreign keys per the design.
+- Only the following can be NULL: Address_line_2 since it’s not required. Customers’ birthdates since it’s not always known. The reservation Checkout Date, Discount Code, Customer Rating, and Notes are also not required since they are allowed to be blank when the reservation is created.  Note, if you see other fields that could be nullable, please clarify these assumptions on Slack. 
+- The following fields should be UNIQUE: Customer email, Feature Name, Location Name, Reservation, and Confirmation Number. Again, if you find other potential non-primary keys, bring this up on Slack.
 •    DEFAULTS:
 
 o    Stay credits earned and used should be set initially to 0 (zero).
@@ -40,23 +41,22 @@ o    Customer Emailed - emails should have a character length of at least 7 or m
  
 
 **Other**
-•    Create indexes on all foreign keys that are not also part of a primary key. Since primary keys are indexed we won’t index a column that is both a PK and FK. Also, index at least 2 other fields in the schema to show you can properly discern which columns should have indexes per design rules discussed in class
-•    Create sequences that auto-increment the payment_id, reservation_id, room_id, location_id, and feature_id by 1 starting at 1. Create a sequence for customer_id that increments by 1 starting at 100001.
+
+- Create indexes on all foreign keys that are not also part of a primary key. Since primary keys are indexed we won’t index a column that is both a PK and FK. Also, index at least 2 other fields in the schema to show you can properly discern which columns should have indexes per design rules discussed in class
+- Create sequences that auto-increment the payment_id, reservation_id, room_id, location_id, and feature_id by 1 starting at 1. Create a sequence for customer_id that increments by 1 starting at 100001.
 
  
 
 **Format**
 
-•    Easy to Read Code: All your code should be well spaced and indented. If it’s not easy to read and messy, you could lose points.
-•    Sections: You must create your script with the three following sections: 
-
-o    Drop Sequence/Tables section - Area of the script that drops all tables and sequences in proper order
-o    Create Sequence/Tables section - Area of the script that creates tables/sequences and adds constraints either via CREATE or ALTER TABLE statements
-o    Insert Data section - Area of the script that inserts data into the tables using “INSERT INTO”
-o    Create Index section – After you seed data, add in indexes for the database to optimize performance
-
-•    Commenting: You should add comments before each section that includes a description of what is happening in that section and your name and UTEID, which is a best practice to know who coded what. 
-•    The script must build the database shown in the ERD exactly which means table names, column names, and constraints must match. That being said, we are not going to specify the exact names of constraints that you create unless stated above. Just be sure to use logical, clear names for constraints.  
+- Easy to Read Code: All your code should be well spaced and indented. If it’s not easy to read and messy, you could lose points.
+- Sections: You must create your script with the three following sections: 
+  - Drop Sequence/Tables section - Area of the script that drops all tables and sequences in proper order
+  - Create Sequence/Tables section - Area of the script that creates tables/sequences and adds constraints either via CREATE or ALTER TABLE statements
+  - Insert Data section - Area of the script that inserts data into the tables using “INSERT INTO”
+  - Create Index section – After you seed data, add in indexes for the database to optimize performance
+- Commenting: You should add comments before each section that includes a description of what is happening in that section and your name and UTEID, which is a best practice to know who coded what. 
+- The script must build the database shown in the ERD exactly which means table names, column names, and constraints must match. That being said, we are not going to specify the exact names of constraints that you create unless stated above. Just be sure to use logical, clear names for constraints.  
 
  
 
