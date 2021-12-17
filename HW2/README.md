@@ -1,9 +1,5 @@
 
-Goal: In this assignment, you are tasked with creating a fully functioning DDL script that the TAs could run to create a demo of your Hotel Reservation System database that you designed in the previous Database Design Assignment. Your script must not only build the database according to the requirements below but also seed it with some data for testing purposes. Lastly, your script must be able to run over and over, meaning it can drop database objects (e.g., tables, sequences, indexes), recreate those objects, and seed with test data in a single script.
-
-Assignment Requirements:
-Do your own work
-•    Your team must do your own work and create your own DDL script based on a working (final version) posted below.  
+**Goal:** In this assignment, you are tasked with creating a fully functioning DDL script that the TAs could run to create a demo of your Hotel Reservation System database that you designed in the previous Database Design Assignment. Your script must not only build the database according to the requirements below but also seed it with some data for testing purposes. Lastly, your script must be able to run over and over, meaning it can drop database objects (e.g., tables, sequences, indexes), recreate those objects, and seed with test data in a single script.
 
 HW2-Starter-ERD.jpeg
 
@@ -83,3 +79,4 @@ Deliverable (What to turn in: two files)
 •    Turn in your DDL script in a (.sql) file format. If you have issues doing this, at least save it as a .txt file. Do not submit in any other format other than .sql and .txt.
 
 •    Write an executive summary (one page) to explain the code, any assumptions your team made to deliver the SQL code to the customer. Save it as a .pdf or .docx file and submit along with the code.
+
