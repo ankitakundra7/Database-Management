@@ -12,6 +12,7 @@ e.g. When you prompt the user and they enter 100002, it should return something 
 3.    Write a script that uses an anonymous block of PL/SQL code that attempts to insert a new customer into the customer table. Just utilize the customer_id_seq to assign the customer_id. Make up your own data. Only fill in the fields that require a value. Use a column list to complete the insert statement. Also commit after the data has been inserted. If the insert is successful, the PL/SQL code should display this message:
 
       1 row was inserted into the customer table.
+      
 If the update is unsuccessful, the procedure should display this message:
 
       Row was not inserted. Unexpected exception occurred.
