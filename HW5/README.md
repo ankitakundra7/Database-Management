@@ -22,6 +22,7 @@ If the update is unsuccessful, the procedure should display this message:
      Hotel feature 2: Pets Allowed
      Hotel feature 3: Pets Not Allowed
      Hotel feature 4: Pool
+     
 5.    Write a more complex version of the previous script that uses a cursor to capture the location name, city, and feature name.  Then output the rows like the shortened sample list below which is sorted by location name, city, and feature name. ***3 bonus points will be given if you can prompt the user for a city and then change the outputted list  to output the location name, city, and feature name for that city.***
 
 Sample Output: (Only first four lines are shown)
