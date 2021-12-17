@@ -1,30 +1,28 @@
-Summary Questions:
+## Subquery
+
 1. Write a SELECT statement that returns a single row with these columns:
-
-The count of the records in the customer table with a column alias of count_of_customers
-The minimum of the stay_credits_earned column in the customer table with column alias of min_credits
-The maximum of the stay_credits_earned column in the customer table with column alias of max_credits
+   - The count of the records in the customer table with a column alias of count_of_customers
+   - The minimum of the stay_credits_earned column in the customer table with column alias of min_credits
+   - The maximum of the stay_credits_earned column in the customer table with column alias of max_credits
 2. We want to know the number of reservations and earliest first check_in_date for each customer to understand which customers are our biggest fans and oldest patrons.
-
-Task: Write a SELECT statement that returns one row for each customer that has a reservation with the following columns and please use table aliases as well:
-The customer_id column from the customer table.   
-The number of reservations on the reservation table with column alias of Number_of_Reservations
-The earliest check_in_date for that customer. This helps us know how long they’ve been doing business with us.  Give this column the alias of earliest_check_in.
+   - Task: Write a SELECT statement that returns one row for each customer that has a reservation with the following columns and please use table aliases as well:
+   - The customer_id column from the customer table.   
+   - The number of reservations on the reservation table with column alias of Number_of_Reservations
+   - The earliest check_in_date for that customer. This helps us know how long they’ve been doing business with us.  Give this column the alias of earliest_check_in.
 3. We’re curious how popular we are based on where customers are from.
-
-Task: Write a SELECT statement that pulls info about customers and summarizes it by city and state.   The following columns should be returned:
-The city column from the customer table
-The state column from the customer table
-The average stay_credits_earned for customers in that city, state.  Please round the results to the nearest whole number and give the column an alias of avg_credits_earned.
+   - Task: Write a SELECT statement that pulls info about customers and summarizes it by city and state.   The following columns should be returned: 
+   - The city column from the customer table
+   - The state column from the customer table
+   - The average stay_credits_earned for customers in that city, state.  Please round the results to the nearest whole number and give the column an alias of avg_credits_earned.
 Sort the results by state ascending and then avg_credits_earned descending (i.e. largest first)
-4. We’d like to know how many times each customer has stayed in a particular room at the South Austin location (i.e. Location_ID 1). Write a SELECT statement that properly joins customer, reservation, reservation_details, and room tables and then returns the following columns for only reservations at location 1:
-
-The customer_id column
-The last_name column
-The room_number column
-The count of reservations (i.e. reseravation_id) for each room with a column alias of stay_count
-Sort the result set by customer_id ascending and then by the stay_count alias in descending order.
-This query should highlight for each customer if they’ve had more than 1 stay in a room or not. 
+4. We’d like to know how many times each customer has stayed in a particular room at the South Austin location (i.e. Location_ID
+   - Write a SELECT statement that properly joins customer, reservation, reservation_details, and room tables and then returns the following columns for only reservations at location 1:
+     - The customer_id column
+     - The last_name column
+     - The room_number column
+     - The count of reservations (i.e. reseravation_id) for each room with a column alias of stay_count
+  - Sort the result set by customer_id ascending and then by the stay_count alias in descending order.
+  - This query should highlight for each customer if they’ve had more than 1 stay in a room or not. 
 5. Make a copy of the previous query and let’s make two updates to it. We decided we only want to look at completed reservations and not in-progress or future reservations so filter to only show status of C.  Then filter out any results that have a stay_count of 2 or less.  This should result in showing us who has already stayed in a particular room 3 or more times.
 
 6. We want to know the anticipated number of guests by location and check_in_date.
