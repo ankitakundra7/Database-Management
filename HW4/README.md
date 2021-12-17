@@ -1,4 +1,6 @@
-## Subquery
+## Summary/Subquery
+
+#### Summary:
 
 1. Write a SELECT statement that returns a single row with these columns:
    - The count of the records in the customer table with a column alias of count_of_customers
@@ -24,28 +26,23 @@ Sort the results by state ascending and then avg_credits_earned descending (i.e.
    - Sort the result set by customer_id ascending and then by the stay_count alias in descending order.
    - This query should highlight for each customer if they’ve had more than 1 stay in a room or not. 
 5. Make a copy of the previous query and let’s make two updates to it. We decided we only want to look at completed reservations and not in-progress or future reservations so filter to only show status of C.  Then filter out any results that have a stay_count of 2 or less.  This should result in showing us who has already stayed in a particular room 3 or more times.
-
 6. We want to know the anticipated number of guests by location and check_in_date.
-
-Part A - Write a query that creates a report to show the sum of number_of_guests on Reservation broken out by the location_name and check_in_date for all reservations that have a future check_in_date (i.e. greater than today’s date).  The report should include the following
-
-The location_name column from the location table
-The check_in_date column from the reservation table
-The sum of the number_of_guests column in the reservation table
-Filter data to always show only records where the check_in_date is in the future.
-Use the ROLLUP operator to include a row that gives the subtotal location_name, check_in_date. 
-Part B – Explain in a commented sentence how the CUBE operator is different than ROLLUP and why it is useful.
-
+   - Part A - Write a query that creates a report to show the sum of number_of_guests on Reservation broken out by the location_name and check_in_date for all reservations that have a future check_in_date (i.e. greater than today’s date).  The report should include the following
+      - The location_name column from the location table
+      - The check_in_date column from the reservation table
+      - The sum of the number_of_guests column in the reservation table
+      - Filter data to always show only records where the check_in_date is in the future.
+      - Use the ROLLUP operator to include a row that gives the subtotal location_name, check_in_date. 
+   - Part B – Explain in a commented sentence how the CUBE operator is different than ROLLUP and why it is useful.
 7. See if you can figure out which features exist at all 3 locations by joining tables, aggregating data, and using having clause. Write a query that query lists all the feature names and the count of locations that have that specific feature.  Show the feature_name and the count of location_ids but use an alias to rename the count to count_of_locations. Lastly, filter out any rows in the query to show only rows that have a count greater than 2 because we only want to see the features that are at 3 locations (i.e. features that are at all locations)
 
- 
+#### Subquery:
 
-Subquery Questions:
 8. Write a query that returns the same result set as this select statement, but don’t use a left join this time. Instead, use a subquery in a WHERE clause that uses the NOT IN keyword. Hint: Start by getting a list of all the customer_ids in the reservation table. This will be used as the subquery in a query that pulls all customers where the customer_id is not in that list.
 
-select distinct c.customer_id, c.first_name, c.last_name, c.email
-from customer c left join reservation r on c.customer_id = r.customer_id
-where reservation_id is null;
+     select distinct c.customer_id, c.first_name, c.last_name, c.email
+     from customer c left join reservation r on c.customer_id = r.customer_id
+      where reservation_id is null;
 9. We want to know all the customers that have earned more than the average number of stay credits.
 
 Write a query statement that answers this question: Which customers have a stay_credits_earned balance that’s greater than the average stay_credits_earned all customers?
