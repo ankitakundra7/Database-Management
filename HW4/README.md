@@ -38,11 +38,14 @@ Sort the results by state ascending and then avg_credits_earned descending (i.e.
 
 ### Subquery:
 
-8. Write a query that returns the same result set as this select statement, but don’t use a left join this time. Instead, use a subquery in a WHERE clause that uses the NOT IN keyword. Hint: Start by getting a list of all the customer_ids in the reservation table. This will be used as the subquery in a query that pulls all customers where the customer_id is not in that list.
+8. Write a query that returns the same result set as this select statement, but don’t use a left join this time. Instead, use a subquery in a WHERE clause that uses the NOT IN keyword. Hint: Start by getting a list of all the customer_ids in the reservation table. 
+
+This will be used as the subquery in a query that pulls all customers where the customer_id is not in that list.
 
      select distinct c.customer_id, c.first_name, c.last_name, c.email
      from customer c left join reservation r on c.customer_id = r.customer_id
       where reservation_id is null;
+      
 9. We want to know all the customers that have earned more than the average number of stay credits.
    - Write a query statement that answers this question: Which customers have a stay_credits_earned balance that’s greater than the average stay_credits_earned all customers?
    - Return the first_name, last_name, email, phone, and stay_credits_earned for each customer.
