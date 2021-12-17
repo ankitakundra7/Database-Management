@@ -4,20 +4,17 @@
 HW2-Starter-ERD.jpeg
 
 **Coding Standards**
-•    Naming: Use the final ERD as a reference on how to name tables and columns. For constraints, make the names clear and easy to understand. Avoid abbreviations.
-•    Data Types / Lengths:
-
-o    NUMBER – Follow the standard of making IDs numeric and any column that involves arithmetic. 
-o    VARCHAR – All non-numeric fields should be VARCHAR except fields mentioned in CHAR section below. 
-o    CHAR – Phone numbers will all be defined as CHAR length of 12 to allow for 10 digits and 2 dashes (e.g. 512-999-1234). State is the abbreviation of a state so its CHAR length of 2. Zipcode only needs to store a length of 5. CardType on the payments table will always be 4 character abbreviations of cards. Confirmation number will always be 8 characters of random letters/numbers. Reservation status is used to track a simple U for Upcoming, I for In Progress, C for Completed, N for No-show, R for Refunded so this is always a length of 1.  The Room Type will also store a single character for the following room types: D for double beds, Q for single queen, K for single king, S for suite that has two rooms and some form of kitchen, C for cabin.
-o    DATE – Any dates fields should be DATE format
-o    Note: Lengths can vary unless specified above.
-
-•    Commenting
-
-o    Include comments at least with each section of code (i.e. DROP, CREATE, INSERT, INDEXES)
-o    Comments should include a description of section and your name/uteid as the author.
-o    If you want to add additional comments to single statements or lines feel free but it’s not required. It’s just a best practice to comment code well.
+- Naming: Use the final ERD as a reference on how to name tables and columns. For constraints, make the names clear and easy to understand. Avoid abbreviations.
+- Data Types / Lengths:
+  - NUMBER – Follow the standard of making IDs numeric and any column that involves arithmetic. 
+  - VARCHAR – All non-numeric fields should be VARCHAR except fields mentioned in CHAR section below. 
+  - CHAR – Phone numbers will all be defined as CHAR length of 12 to allow for 10 digits and 2 dashes (e.g. 512-999-1234). State is the abbreviation of a state so its CHAR length of 2. Zipcode only needs to store a length of 5. CardType on the payments table will always be 4 character abbreviations of cards. Confirmation number will always be 8 characters of random letters/numbers. Reservation status is used to track a simple U for Upcoming, I for In Progress, C for Completed, N for No-show, R for Refunded so this is always a length of 1.  The Room Type will also store a single character for the following room types: D for double beds, Q for single queen, K for single king, S for suite that has two rooms and some form of kitchen, C for cabin.
+  - DATE – Any dates fields should be DATE format
+  - Note: Lengths can vary unless specified above.
+- Commenting
+  - Include comments at least with each section of code (i.e. DROP, CREATE, INSERT, INDEXES)
+  - Comments should include a description of section and your name/uteid as the author.
+  - If you want to add additional comments to single statements or lines feel free but it’s not required. It’s just a best practice to comment code well.
 
  
 
@@ -26,17 +23,14 @@ o    If you want to add additional comments to single statements or lines feel f
 - Assign primary and foreign keys per the design.
 - Only the following can be NULL: Address_line_2 since it’s not required. Customers’ birthdates since it’s not always known. The reservation Checkout Date, Discount Code, Customer Rating, and Notes are also not required since they are allowed to be blank when the reservation is created.  Note, if you see other fields that could be nullable, please clarify these assumptions on Slack. 
 - The following fields should be UNIQUE: Customer email, Feature Name, Location Name, Reservation, and Confirmation Number. Again, if you find other potential non-primary keys, bring this up on Slack.
-•    DEFAULTS:
-
-o    Stay credits earned and used should be set initially to 0 (zero).
-o    The reservation Date_Created should default to the current date using the SYSDATE function. I know…we didn’t cover this in class but you can figure this out if you dig a little in your book or online. You can do it! 
-
-•    Make sure the following Check constraints are added:
-
-o    Reservation status as of now can only be the following values detailed above: U, I, C, N, or R.  
-o    The Room Type as of now can only be the following values detailed above: D, Q, K, S, or C.
-o    Stay Credits Used should never be greater than the Stay Credits Earned 
-o    Customer Emailed - emails should have a character length of at least 7 or more. Again, just because we didn’t cover it in class doesn’t mean you can’t google it and figure it out. Name this constraint “email_length_check”.
+- DEFAULTS:
+  - Stay credits earned and used should be set initially to 0 (zero).
+  - The reservation Date_Created should default to the current date using the SYSDATE function. I know…we didn’t cover this in class but you can figure this out if you dig a little in your book or online. You can do it! 
+- Make sure the following Check constraints are added:
+  - Reservation status as of now can only be the following values detailed above: U, I, C, N, or R.  
+  - The Room Type as of now can only be the following values detailed above: D, Q, K, S, or C.
+  - Stay Credits Used should never be greater than the Stay Credits Earned 
+  - Customer Emailed - emails should have a character length of at least 7 or more. Again, just because we didn’t cover it in class doesn’t mean you can’t google it and figure it out. Name this constraint “email_length_check”.
 
  
 
