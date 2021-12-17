@@ -8,7 +8,7 @@
    - **Part B:** Using the MINUS operator, compare the query from #3 to the query from Part A in #4.  If you get no rows returned, that means the queries produce the same results. 
 5. Write a SELECT statement that returns these column names and data from the Reservation table:
 
-Select Statement:
+
 
      customer_id     The customer_id column
      location_id     The location_id column
