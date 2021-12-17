@@ -1,3 +1,5 @@
+## DDL Script Assignment
+
 
 **Goal:** In this assignment, you are tasked with creating a fully functioning DDL script that the TAs could run to create a demo of your Hotel Reservation System database that you designed in the previous Database Design Assignment. Your script must not only build the database according to the requirements below but also seed it with some data for testing purposes. Lastly, your script must be able to run over and over, meaning it can drop database objects (e.g., tables, sequences, indexes), recreate those objects, and seed with test data in a single script.
 
