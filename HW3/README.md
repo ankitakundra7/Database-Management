@@ -10,9 +10,9 @@
 
 Select Statement:
 
-   customer_id     The customer_id column
-   location_id     The location_id column
-   length_of_stay  This is calculated by subtracting check_in_date from the check_out_date. Assign an alias of length_of_stay 
+     customer_id     The customer_id column
+     location_id     The location_id column
+     length_of_stay  This is calculated by subtracting check_in_date from the check_out_date. Assign an alias of length_of_stay 
 
 
 Filter the query to only show completed reservations (i.e. status = ‘C’).  After you have that running correctly, update filter to use the ROWNUM pseudo column so the result set contains only the first 10 rows from the table.Sort the result set by the column alias length_of_stay in descending order and then also by customer_id ascending
