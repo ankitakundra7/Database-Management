@@ -3,7 +3,7 @@
 
 HW2-Starter-ERD.jpeg
 
-Coding Standards
+**Coding Standards**
 •    Naming: Use the final ERD as a reference on how to name tables and columns. For constraints, make the names clear and easy to understand. Avoid abbreviations.
 •    Data Types / Lengths:
 
@@ -21,7 +21,7 @@ o    If you want to add additional comments to single statements or lines feel f
 
  
 
-Constraints
+**Constraints**
 •    Assign primary and foreign keys per the design.
 •    Only the following can be NULL: Address_line_2 since it’s not required. Customers’ birthdates since it’s not always known. The reservation Checkout Date, Discount Code, Customer Rating, and Notes are also not required since they are allowed to be blank when the reservation is created.  Note, if you see other fields that could be nullable, please clarify these assumptions on Slack. 
 •    The following fields should be UNIQUE: Customer email, Feature Name, Location Name, Reservation, and Confirmation Number. Again, if you find other potential non-primary keys, bring this up on Slack.
@@ -39,13 +39,14 @@ o    Customer Emailed - emails should have a character length of at least 7 or m
 
  
 
-Other
+**Other**
 •    Create indexes on all foreign keys that are not also part of a primary key. Since primary keys are indexed we won’t index a column that is both a PK and FK. Also, index at least 2 other fields in the schema to show you can properly discern which columns should have indexes per design rules discussed in class
 •    Create sequences that auto-increment the payment_id, reservation_id, room_id, location_id, and feature_id by 1 starting at 1. Create a sequence for customer_id that increments by 1 starting at 100001.
 
  
 
-Format 
+**Format**
+
 •    Easy to Read Code: All your code should be well spaced and indented. If it’s not easy to read and messy, you could lose points.
 •    Sections: You must create your script with the three following sections: 
 
@@ -67,4 +68,4 @@ Seed your tables based on the following requirement: NOTE: Include commits after
 - Create 2 rooms for each location (even though in reality there should be more)
 - Create 2 customers that have payments attached.  The first customer should have your first and last name. Their email should be your uteid + “utexas.edu”. (e.g. abd123@utexas.edu). The rest of the data about you can be fake. Make up data for the 2nd customer. 
 - For your customer account, create a single room reservation.  For the 2nd, create two separate reservations that are on different dates.
-- NOTE: If you need to clarify any data requirements, ask on Slack.**
+
