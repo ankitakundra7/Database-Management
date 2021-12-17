@@ -19,7 +19,9 @@ If the update is unsuccessful, the procedure should display this message:
 
       Row was not inserted. Unexpected exception occurred.
       
-4. Write a script that uses an anonymous block of PL/SQL code that uses a bulk collect to capture a list of available features that begin with the letter P. The rows in this result set should be sorted by feature name. Then, the code should display a string variable for each feature and its feature.  NOTE: We’re to just going to assign a number for the feature based on it’s place in the list and not its actual feature_id. Your output should look like this: 
+4. Write a script that uses an anonymous block of PL/SQL code that uses a bulk collect to capture a list of available features that begin with the letter P. The rows in this result set should be sorted by feature name. Then, the code should display a string variable for each feature and its feature.  NOTE: We’re to just going to assign a number for the feature based on it’s place in the list and not its actual feature_id. 
+
+Your output should look like this: 
 
      Hotel feature 1: Parking Included
      Hotel feature 2: Pets Allowed
