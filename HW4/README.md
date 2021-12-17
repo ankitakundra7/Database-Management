@@ -1,6 +1,6 @@
 ## Summary/Subquery
 
-#### Summary:
+### Summary:
 
 1. Write a SELECT statement that returns a single row with these columns:
    - The count of the records in the customer table with a column alias of count_of_customers
@@ -36,7 +36,7 @@ Sort the results by state ascending and then avg_credits_earned descending (i.e.
    - Part B – Explain in a commented sentence how the CUBE operator is different than ROLLUP and why it is useful.
 7. See if you can figure out which features exist at all 3 locations by joining tables, aggregating data, and using having clause. Write a query that query lists all the feature names and the count of locations that have that specific feature.  Show the feature_name and the count of location_ids but use an alias to rename the count to count_of_locations. Lastly, filter out any rows in the query to show only rows that have a count greater than 2 because we only want to see the features that are at 3 locations (i.e. features that are at all locations)
 
-#### Subquery:
+### Subquery:
 
 8. Write a query that returns the same result set as this select statement, but don’t use a left join this time. Instead, use a subquery in a WHERE clause that uses the NOT IN keyword. Hint: Start by getting a list of all the customer_ids in the reservation table. This will be used as the subquery in a query that pulls all customers where the customer_id is not in that list.
 
