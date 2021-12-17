@@ -62,10 +62,9 @@ o    Create Index section – After you seed data, add in indexes for the databa
 **Data Requirements**
 
 Seed your tables based on the following requirement: NOTE: Include commits after each group of inserts for a particular table and don’t forget to regularly commit to avoid taxing the server and causing NOWAIT error.
-
--    Create the 3 locations mentioned in HW1 and make-up details on address, phone, and URL.
--        Create up to 3 features that can be shared or unique to the locations but make sure at least one location has multiple features assigned to it
--            Create 2 rooms for each location (even though in reality there should be more)
--                Create 2 customers that have payments attached.  The first customer should have your first and last name. Their email should be your uteid + “utexas.edu”. (e.g. abd123@utexas.edu). The rest of the data about you can be fake. Make up data for the 2nd customer. 
--                    For your customer account, create a single room reservation.  For the 2nd, create two separate reservations that are on different dates.
--                       NOTE: If you need to clarify any data requirements, ask on Slack.**
+- Create the 3 locations mentioned in HW1 and make-up details on address, phone, and URL.
+- Create up to 3 features that can be shared or unique to the locations but make sure at least one location has multiple features assigned to it
+- Create 2 rooms for each location (even though in reality there should be more)
+- Create 2 customers that have payments attached.  The first customer should have your first and last name. Their email should be your uteid + “utexas.edu”. (e.g. abd123@utexas.edu). The rest of the data about you can be fake. Make up data for the 2nd customer. 
+- For your customer account, create a single room reservation.  For the 2nd, create two separate reservations that are on different dates.
+- NOTE: If you need to clarify any data requirements, ask on Slack.**
